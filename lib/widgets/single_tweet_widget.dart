@@ -9,7 +9,7 @@ class SingleTweet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Divider(),
+        const Divider(),
         const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -58,6 +58,32 @@ class SingleTweet extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     maxLines: 3,
                   ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.message,
+                      color: Colors.grey,
+                    ),
+                    SizedBox(width: 50),
+                    Icon(
+                      Icons.recycling,
+                      color: Colors.grey,
+                    ),
+                    SizedBox(width: 50),
+                    Icon(
+                      Icons.favorite,
+                      color: Colors.grey,
+                    ),
+                    SizedBox(width: 50),
+                    Icon(
+                      Icons.send_to_mobile,
+                      color: Colors.grey,
+                    ),
+                  ],
                 )
               ],
             ),

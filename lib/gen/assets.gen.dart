@@ -32,9 +32,19 @@ class $AssetsImagesGen {
   AssetGenImage get searchIcon =>
       const AssetGenImage('assets/images/search_icon.png');
 
+  /// File path: assets/images/twitter_logo.png
+  AssetGenImage get twitterLogo =>
+      const AssetGenImage('assets/images/twitter_logo.png');
+
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [addMemberIcon, homeIcon, mailIcon, notificationsIcon, searchIcon];
+  List<AssetGenImage> get values => [
+        addMemberIcon,
+        homeIcon,
+        mailIcon,
+        notificationsIcon,
+        searchIcon,
+        twitterLogo
+      ];
 }
 
 class Assets {

@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/models/follower_item_model.dart';
 
-class MemberOfListItem extends StatelessWidget {
+class MemberOfListItem extends StatefulWidget {
+  final FollowerItemModel model;
   const MemberOfListItem({
     super.key,
+    required this.model,
   });
 
+  @override
+  State<MemberOfListItem> createState() => _MemberOfListItemState();
+}
+
+class _MemberOfListItemState extends State<MemberOfListItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,22 +23,22 @@ class MemberOfListItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Pixsellz team',
-                  style: TextStyle(fontSize: 15),
+                  widget.model.name,
+                  style: const TextStyle(fontSize: 15),
                 ),
-                SizedBox(height: 7),
+                const SizedBox(height: 7),
                 Text(
-                  'start-up',
-                  style: TextStyle(fontSize: 20),
+                  widget.model.desc,
+                  style: const TextStyle(fontSize: 20),
                 ),
-                SizedBox(height: 7),
+                const SizedBox(height: 7),
                 Text(
-                  '88 members',
-                  style: TextStyle(color: Colors.grey),
+                  '${widget.model.memberCount.toString()} followers',
+                  style: const TextStyle(color: Colors.grey),
                 ),
               ],
             ),
@@ -38,7 +46,7 @@ class MemberOfListItem extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: CircleAvatar(
                 radius: 30,
-                backgroundColor: Colors.blue.shade100,
+                backgroundColor: widget.model.avatarColor,
               ),
             ),
           ],
