@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/screens/list_screens/twitter_lists_screen.dart';
+import 'package:twitter_clone/screens/login/login_screen.dart';
+import 'package:twitter_clone/utils/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
       title: 'Twitter Clone',
       debugShowCheckedModeBanner: false,
-      home: TwitterListScreen(),
+      home: LoginScreen(),
+      onGenerateRoute: Routes.onGenerateRoute,
     );
   }
 }

@@ -16,6 +16,10 @@ class $AssetsImagesGen {
   AssetGenImage get addMemberIcon =>
       const AssetGenImage('assets/images/add_member_icon.png');
 
+  /// File path: assets/images/features_icon.png
+  AssetGenImage get featuresIcon =>
+      const AssetGenImage('assets/images/features_icon.png');
+
   /// File path: assets/images/home_icon.png
   AssetGenImage get homeIcon =>
       const AssetGenImage('assets/images/home_icon.png');
@@ -39,6 +43,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         addMemberIcon,
+        featuresIcon,
         homeIcon,
         mailIcon,
         notificationsIcon,

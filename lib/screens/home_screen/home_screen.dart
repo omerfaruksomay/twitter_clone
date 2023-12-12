@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:twitter_clone/gen/assets.gen.dart';
 import 'package:twitter_clone/widgets/single_tweet_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Twitter'),
+        title: Assets.images.twitterLogo.image(scale: 2),
         leading: Padding(
           padding: const EdgeInsets.only(left: 15),
           child: CircleAvatar(
@@ -27,10 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(right: 20),
             child: IconButton(
               onPressed: () {},
-              icon: const Icon(
-                Icons.favorite,
-                size: 40,
-              ),
+              icon: Assets.images.featuresIcon.image(scale: 2),
             ),
           ),
         ],

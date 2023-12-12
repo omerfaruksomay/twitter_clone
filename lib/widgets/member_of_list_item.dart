@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/extensions/text_style.dart';
 import 'package:twitter_clone/models/follower_item_model.dart';
 
 class MemberOfListItem extends StatefulWidget {
@@ -27,17 +28,18 @@ class _MemberOfListItemState extends State<MemberOfListItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  widget.model.name,
+                  widget.model.name.toUpperCaseFirstLetter(),
                   style: const TextStyle(fontSize: 15),
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  widget.model.desc,
+                  widget.model.desc.toUpperCaseFirstLetter(),
                   style: const TextStyle(fontSize: 20),
                 ),
                 const SizedBox(height: 7),
                 Text(
-                  '${widget.model.memberCount.toString()} followers',
+                  '${widget.model.memberCount.toString()} followers'
+                      .toUpperCaseFirstLetter(),
                   style: const TextStyle(color: Colors.grey),
                 ),
               ],
